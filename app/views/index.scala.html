@@ -1,0 +1,11 @@
+@(message: String)
+
+@import helper._
+
+@main("Welcome to Upload System") {
+  <h1>あっぷろーどしすてむ</h1>
+  @form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+    <input type="file" name="picture">
+    <p><input type="submit"></p>
+  }
+}
